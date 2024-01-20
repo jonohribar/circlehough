@@ -55,5 +55,5 @@ def test_hough_transform_ring():
         hough_epsilon
     )
     indices_of_maximum_value = np.unravel_index(
-        np.argmax(houghSpace), dims=houghSpace.shape)
+        np.argmax(houghSpace), shape=houghSpace.shape)
     assert indices_of_maximum_value == (3, 3, 2)

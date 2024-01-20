@@ -1,5 +1,5 @@
 import numpy as np
-from .hough_transformation import hough_transform_ring
+from circlehough.hough_transformation import hough_transform_ring
 
 
 def get_bin_centers(
@@ -24,7 +24,7 @@ def interpretHoughSpace(
     houghSpace
 ):
     indices_of_maximum_value = np.unravel_index(
-        np.argmax(houghSpace), dims=houghSpace.shape)
+        np.argmax(houghSpace), shape=houghSpace.shape)
     return indices_of_maximum_value
 
 
